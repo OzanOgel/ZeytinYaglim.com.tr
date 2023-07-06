@@ -1,0 +1,73 @@
+{
+  "records": [
+    {
+      "UrunNo": "1",
+      "UrunAdi": "Zade Natürel Sızma Zaytin Yağı",
+      "sise": "Pet şişe",
+      "Foto1": "zade1.jpg",
+      "Foto2": "zade2.jpg",
+      "Foto3": "zade3.png",
+      "UrunFiyat": "184,90",
+      "aciklama": "Natural Sızma Zeytinyağı",
+      "litre": "1"
+    },
+    {
+      "UrunNo": "2",
+      "UrunAdi": "Ege Tarım Birlik Zeytinyağı",
+      "sise": "Teneke",
+      "Foto1": "EgeTarimBirlik.jpg",
+      "Foto2": "EgeTarimBirlik2.jpeg",
+      "Foto3": "EgeTarimBirlik3.jpeg",
+      "UrunFiyat": "269,99",
+      "aciklama": "Ege Tarım Birlik Zeytinyağı 5 Lt",
+      "litre": "5"
+    },
+    {
+      "UrunNo": "3",
+      "UrunAdi": "Komili Riviera Zeytinyağı",
+      "sise": "Pet şişe",
+      "Foto1": "komili1.jpg",
+      "Foto2": "komili2.jpg",
+      "Foto3": "komili3.jpg",
+      "UrunFiyat": "209,99",
+      "aciklama": "Komili Riviera Zeytinyağı 2 L ",
+      "litre": "2"
+    },
+    {
+      "UrunNo": "4",
+      "UrunAdi": "The Mill Natürel Sızma Zeytinyağı",
+      "sise": "Cam şişe",
+      "Foto1": "themill.jpg",
+      "Foto2": "themill2.jpg",
+      "Foto3": "themill3.jpg",
+      "UrunFiyat": "111,20",
+      "aciklama": "Uluslararası Lezzet Enstitüsü 2021/2022/2023 Yılı ÜSTÜN 3 YILDIZ LEZZET ÖDÜLÜ - Salata ve Yemeklere Uygun",
+      "litre": "0,5"
+    },
+    {
+      "UrunNo": "5",
+      "UrunAdi": "Efe Organic Ultra Natural Zeytinyağı ",
+      "sise": "Teneke",
+      "Foto1": "efeorganic1.jpg",
+      "Foto2": "efeorganic2.jpg",
+      "Foto3": "efeorganic3.jpg",
+      "UrunFiyat": "902,40",
+      "aciklama": "Efe Organik Efe Organic Ultra Natural Zeytinyağı 20 Lt ",
+      "litre": "20"
+    },
+    {
+      "UrunNo": "6",
+      "UrunAdi": "Lux Ayvalık Sızma Zeytin Yağı ",
+      "sise": "Teneke",
+      "Foto1": "lux.jpg",
+      "Foto2": "lux2.jpg",
+      "Foto3": "lux3.jpg",
+      "UrunFiyat": "902,40",
+      "aciklama": "Efe Organik Efe Organic Ultra Natural Zeytinyağı 20 Lt ",
+      "litre": "20"
+    }
+
+
+
+  ]
+}
