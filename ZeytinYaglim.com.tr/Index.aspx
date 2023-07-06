@@ -36,6 +36,15 @@
         height: 200px; 
       }
     }
+    .buy{
+        background-color:darkolivegreen !important;
+       
+    }
+    .card:hover{
+        border-color:darkolivegreen;
+        box-shadow:0 0 10px 2px darkolivegreen;
+    
+    }
     </style>
     <script src="Assets/angular-1.8.2/angular.min.js"></script>
 </asp:Content>
@@ -76,6 +85,27 @@
     <div class="container mt-5" style="padding-left:50px; padding-right:50px;">
      <div ng-app="tablo" ng-controller="controller">
     <input type="text" ng-model="search" placeholder="Arama..." class="form-control" />
+         <div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl-4" ng-repeat="x in veri | filter:search">
+                    <div class="card" style="margin-bottom:30px;">
+                        <img ng-src="Assets/UrunFoto/{{x.Foto1}}" style="max-width:400px; max-height:500px;" class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center;"><strong>{{x.UrunAdi}}</strong></h5>
+                            <p class="card-text" style="min-height:70px; text-align:center;">{{x.aciklama}}</p>
+                            <p class="card-text">Fiyat: {{x.UrunFiyat}}</p>
+                            <p class="card-text">Şişe Türü: {{x.sise}}</p>
+                            <p class="card-text">Litre: {{x.litre}}</p>
+                            <a href="Details.aspx?zid={{x.UrunNo}}" class="buy btn btn-dark" ng-click="buyClicked($event)">Satın Al</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="table-responsive">
         <table class="table table-bordered">
             <tr>
@@ -106,16 +136,43 @@
     </div>
 
    
-     <script>
-         var app = angular.module('tablo', []);
-         app.controller('controller', function ($scope, $http, $interval) {
-             $interval(function () {
-                 $http.get('json.json').then(function (response) {
-                     $scope.veri = response.data.records;
-                 }, 1000)
-             })
-         })
-     </script>
+<script>
+    var app = angular.module('tablo', []);
+    app.controller('controller', function ($scope, $http, $interval) {
+        $scope.buyClicked = function (event) {
+            if (event.currentTarget.classList.contains('disabled')) {
+                event.preventDefault();
+                return;
+            }
+
+            event.currentTarget.classList.add('disabled');
+
+            setTimeout(function () {
+                event.currentTarget.classList.remove('disabled');
+            }, 1000);
+        };
+
+        $interval(function () {
+            $http.get('json.json').then(function (response) {
+                $scope.veri = response.data;
+            });
+        }, 1000);
+    });
+</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.kucuk-fotograf').click(function () {
+                var buyukFotoUrl = $(this).data('buyuk-foto');
+                $('#buyukFoto').attr('src', buyukFotoUrl);
+
+                $('.kucuk-fotograf').removeClass('secili');
+                $(this).addClass('secili');
+            });
+        });
+    </script>
+
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
 </asp:Content>
+    
