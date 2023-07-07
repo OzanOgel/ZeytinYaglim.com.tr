@@ -4,33 +4,34 @@
 
 <html>
 <head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/fontawesome/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Assets/fontawesome/css/all.min.css" rel="stylesheet" />
- 
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
     <style>
         .navbar {
-            background-color: #b6d957; /* Yeşil renk kodu */
+            background-color: #b6d957;
         }
 
         .navbar-brand {
-            color: #ffffff; /* Beyaz renk */
+            color: #ffffff;
             font-weight: bold;
         }
 
+        .navbar-toggler {
+            border: none;
+        }
+
         .navbar-nav .nav-link {
-            color: #ffffff; /* Beyaz renk */
+            color: #ffffff;
             font-weight: bold;
             margin-right: 10px;
         }
 
         .navbar-nav .nav-link:hover {
-            color: #000000; /* Siyah renk */
+            color: #000000;
         }
 
         .logname {
@@ -43,41 +44,37 @@
             margin-right: 4px;
         }
     </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a style="margin-left:10px;" class="navbar-brand" href="#">
-                    <img src="Assets/Images/logo.png" style="width:60px;" /> <span class="logname">ZeytinYaglim.com</span> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="Index.aspx">
+                    <img src="Assets/Images/logo.png" style="width:60px;" /> <span class="logname">ZeytinYaglim.com</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Ana Sayfa</a>
+                            <a class="nav-link" href="Index.aspx"><i style="margin-right:5px; margin-top:2px;" class="fa-sharp fa-solid fa-house"></i>Ana Sayfa</a>
                         </li>
+                      
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Hakkımızda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Hizmetler</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">İletişim</a>
+                            <a class="nav-link" href="Iletişim.aspx"><i style="margin-right:5px; margin-top:2px;" class="fa-solid fa-tty"></i>İletişim</a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-           <script src="Scripts/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Assets/fontawesome/js/all.min.js"></script>
-    <script src="Assets/angular-1.8.2/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4774,6 +4774,7 @@
     <Content Include="Assets\fontawesome\svgs\solid\yen-sign.svg" />
     <Content Include="Assets\fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="Assets\fontawesome\svgs\solid\z.svg" />
+    <Content Include="Assets\Images\Başlıksız-removebg-preview.png" />
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\slide 1.jpg" />
     <Content Include="Assets\Images\slide3.jpg" />
@@ -4814,6 +4815,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Details.aspx" />
+    <Content Include="Iletişim.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -4830,6 +4832,13 @@
     </Compile>
     <Compile Include="Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Iletişim.aspx.cs">
+      <DependentUpon>Iletişim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iletişim.aspx.designer.cs">
+      <DependentUpon>Iletişim.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

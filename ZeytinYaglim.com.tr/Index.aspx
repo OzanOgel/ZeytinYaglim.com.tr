@@ -3,7 +3,7 @@
     
     <style>
         body{
-            height:6000px;
+            
         }
     .carousel-item {
       height: 400px;
@@ -45,6 +45,7 @@
         box-shadow:0 0 10px 2px darkolivegreen;
     
     }
+   
     </style>
     <script src="Assets/angular-1.8.2/angular.min.js"></script>
 </asp:Content>
@@ -116,6 +117,7 @@
                 <th>Fiyat</th>
                 <th>Açıklama</th>
                 <th>Litre</th>
+                <th>Satın Al</th>
             </tr>
             <tr ng-repeat="x in veri | filter:search">
                 <td>{{x.UrunNo}}</td>
@@ -125,6 +127,7 @@
                 <td>{{x.UrunFiyat}}</td>
                 <td>{{x.aciklama}}</td>
                 <td>{{x.litre}}</td>
+                <td><a href="Details.aspx?zid={{x.UrunNo}}" class="buy btn btn-dark" ng-click="buyClicked($event)">Satın Al</a></td>
             </tr>
             
         </table>
@@ -173,6 +176,5 @@
     </script>
 
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
 </asp:Content>
     

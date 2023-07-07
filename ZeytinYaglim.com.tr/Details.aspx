@@ -4,7 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <style>
         .carousel-item {
-            height: 500px;
+            height: 450px;
             overflow: hidden;
         }
 
@@ -39,6 +39,10 @@
             margin-left:auto;
             margin-right:auto;
         }
+        .buy{
+        background-color:darkolivegreen !important;
+       
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -47,6 +51,7 @@
             <div class="container mt-3">
                 <div class="tasiyici">
                     <div class="row">
+                       
                         <div class="col-md-6 yapi">
                             <div id="carouselExample<%# Container.ItemIndex %>" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner mb-3">
@@ -82,6 +87,15 @@
                                     <span class="visually-hidden" style="color:black;">Next</span>
                                 </a>
                             </div>
+                        </div>
+                         <div class="col-md-6 yapi">
+                           
+                           <h1 style="color:darkolivegreen; text-align:center; font-family:Calibri; margin-top:20px;">  <%#Eval("UrunAdi") %></h1><br /><br />
+                             <p style="color:gray; text-align:center; font-size:15pt; height:100px;"><%# Eval("aciklama") %></p>
+                             <label style="font-size:20pt; font-family:Calibri;margin-top:30px; margin-left:20px;">Litre: <%# Eval("litre") %></label><br />
+                             <label style="font-size:20pt; font-family:Calibri;margin-top:30px; margin-left:20px;">Şişe: <%# Eval("sise") %></label><br />
+                             <label style="font-size:20pt; font-family:Calibri;margin-top:30px; margin-left:20px;">Fiyat: <%# Eval("UrunFiyat") %></label><br /><br />
+                             <a href="#" class="buy btn btn-dark form-control">Satın Al</a>
                         </div>
                     </div>
                 </div>
